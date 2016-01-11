@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"
+        android:layout_toStartOf="@+id/bBD"
+        android:layout_alignParentEnd="true">
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_todos"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_ciclo"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar Registro"
+        android:id="@+id/bReg"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar Base Datos"
+        android:id="@+id/bBD"
+        android:layout_alignTop="@+id/bReg"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/lista"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/bReg"
+        android:layout_below="@+id/linearLayout2"
+        android:background="#7fff83da" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:id="@+id/linearLayout2">
+
+        <Spinner
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_curso" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_idalum"
+                android:layout_gravity="center_horizontal"
+                android:hint="id alumno" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editidprof"
+                android:layout_gravity="center_horizontal"
+                android:hint="id profesor"
+                android:layout_marginTop="-6dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
